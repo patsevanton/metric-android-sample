@@ -49,8 +49,8 @@ android {
 }
 
 sentry {
-    org = System.getenv("SENTRY_ORG") ?: "your-org"
-    projectName = System.getenv("SENTRY_PROJECT") ?: "your-project"
+    org = System.getenv("SENTRY_ORG") ?: "myorg"
+    projectName = System.getenv("SENTRY_PROJECT") ?: "android-demo"
     authToken = System.getenv("SENTRY_AUTH_TOKEN")
     url = System.getenv("SENTRY_URL")
     autoUploadProguardMapping = System.getenv("SENTRY_AUTH_TOKEN") != null

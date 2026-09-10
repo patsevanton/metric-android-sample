@@ -5,6 +5,6 @@
 # sentry.properties must NOT be committed (contains auth token).
 
 defaults.url=https://metric.example.com
-defaults.org=your-org
-defaults.project=your-project
+defaults.org=myorg
+defaults.project=android-demo
 auth.token=
