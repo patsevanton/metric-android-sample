@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Metric Demo</string>
+
+    <string name="setup_title">Настройка подключения</string>
+    <string name="setup_dsn_label">DSN (Data Source Name)</string>
+    <string name="setup_dsn_hint">https://KEY@metric.example.com/PROJECT_ID</string>
+    <string name="setup_connect">Подключить</string>
+    <string name="setup_reset">Сбросить</string>
+    <string name="setup_connected">Подключено</string>
+    <string name="setup_not_connected">Не подключено</string>
+    <string name="setup_hint_text">Вставьте DSN из Metric: проект → Connect an SDK. DSN сохраняется локально и используется для инициализации Sentry SDK.</string>
+
+    <string name="home_title">Metric Demo</string>
+    <string name="home_subtitle">Выберите категорию, чтобы раскрыть возможности Metric</string>
+    <string name="category_errors">Ошибки и крэши</string>
+    <string name="category_traces">Трейсы / Performance</string>
+    <string name="category_releases">Релизы и сессии</string>
+    <string name="category_sourcemaps">Source maps / ProGuard</string>
+    <string name="category_context">Breadcrumbs / контекст</string>
+    <string name="category_feedback">User feedback</string>
+    <string name="category_advanced">Продвинутые механики</string>
+
+    <string name="common_back">Назад</string>
+    <string name="common_sent">Событие отправлено</string>
+    <string name="common_connected">Подключено</string>
+    <string name="common_not_connected">Не подключено: введите DSN</string>
+
+    <string name="errors_capture_exception">Отправить перехваченное исключение</string>
+    <string name="errors_uncaught_crash">Вызвать необработанный крэш</string>
+    <string name="errors_capture_message">Отправить сообщение (info)</string>
+    <string name="errors_warning">Отправить предупреждение (warning)</string>
+    <string name="errors_custom_message">Исключение с кастомным сообщением</string>
+    <string name="errors_log_exception">Захватить через try/catch + log</string>
+
+    <string name="traces_transaction">Запустить ручную транзакцию</string>
+    <string name="traces_nested_spans">Транзакция с вложенными спанами</string>
+    <string name="traces_slow">Медленная операция (sleep)</string>
+    <string name="traces_http">HTTP-запрос</string>
+    <string name="traces_http_url_label">URL запроса</string>
+    <string name="traces_http_default_url">https://httpbin.org/get</string>
+    <string name="traces_http_run">Выполнить запрос</string>
+    <string name="traces_http_result">Результат: %1$s</string>
+
+    <string name="releases_release">Текущий release</string>
+    <string name="releases_environment">Окружение</string>
+    <string name="releases_restart_session">Перезапустить сессию</string>
+    <string name="releases_end_session">Завершить сессию (crashed)</string>
+    <string name="releases_capture_message">Событие с тегом release</string>
+
+    <string name="sourcemaps_crash_note">Для демонстрации деобфускации соберите release-сборку (R8 + ProGuard). Крэш ниже сработает в minified-сборке, а mapping загрузит Sentry Gradle Plugin.</string>
+    <string name="sourcemaps_crash_release">Вызвать крэш (release-сборка)</string>
+
+    <string name="context_breadcrumb">Добавить breadcrumb</string>
+    <string name="context_tag">Добавить тег</string>
+    <string name="context_extra">Добавить extra</string>
+    <string name="context_user">Установить пользователя</string>
+    <string name="context_set_context">setContext (device-подобный)</string>
+    <string name="context_scope">Изменить scope и отправить</string>
+    <string name="context_send">Отправить событие с контекстом</string>
+
+    <string name="feedback_capture">Захватить скриншот + событие</string>
+    <string name="feedback_dialog">Открыть диалог фидбека</string>
+    <string name="feedback_attachment">Событие с вложением</string>
+
+    <string name="advanced_custom_span">Кастомный span вне транзакции</string>
+    <string name="advanced_fingerprint">Событие с кастомным fingerprint</string>
+    <string name="advanced_sampling">Событие (учитывает семплинг)</string>
+    <string name="advanced_before_send">Событие, изменённое в beforeSend</string>
+    <string name="advanced_drop">Событие, отброшенное в beforeSend</string>
+</resources>

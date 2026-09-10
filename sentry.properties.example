@@ -1,0 +1,10 @@
+# Sentry Gradle Plugin configuration
+
+# Copy to sentry.properties and fill in real values, OR set env vars:
+#   SENTRY_AUTH_TOKEN, SENTRY_ORG, SENTRY_PROJECT, SENTRY_URL
+# sentry.properties must NOT be committed (contains auth token).
+
+defaults.url=https://metric.example.com
+defaults.org=your-org
+defaults.project=your-project
+auth.token=
