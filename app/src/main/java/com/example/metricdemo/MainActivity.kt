@@ -10,9 +10,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        SentryManager.getStoredDsn(this)?.let { dsn ->
-            SentryManager.init(this, dsn)
-        }
+        SentryManager.init(this)
         setContent {
             MetricDemoTheme {
                 App()

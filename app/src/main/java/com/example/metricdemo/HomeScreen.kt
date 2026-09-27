@@ -13,7 +13,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -22,7 +21,7 @@ import androidx.compose.ui.unit.dp
 private data class Category(val route: String, val title: Int)
 
 @Composable
-fun HomeScreen(onNavigate: (String) -> Unit, onOpenSetup: () -> Unit) {
+fun HomeScreen(onNavigate: (String) -> Unit) {
     val categories = listOf(
         Category(Routes.ERRORS, R.string.category_errors),
         Category(Routes.TRACES, R.string.category_traces),
@@ -64,10 +63,6 @@ fun HomeScreen(onNavigate: (String) -> Unit, onOpenSetup: () -> Unit) {
                     )
                 }
                 Spacer(Modifier.height(8.dp))
-            }
-            Spacer(Modifier.height(8.dp))
-            TextButton(onClick = onOpenSetup) {
-                Text(stringResource(R.string.setup_title))
             }
         }
     }

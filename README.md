@@ -63,11 +63,14 @@ export SENTRY_AUTH_TOKEN=... \
 
 ## Запуск
 
-1. Установите APK на устройство/эмулятор.
-2. На экране настройки вставьте DSN из Metric (проект → **Connect an SDK**).
-   DSN имеет вид `https://PROJECT_KEY@metric.example.com/PROJECT_ID`.
-3. Нажмите «Подключить». SDK инициализируется, DSN сохраняется локально.
-4. Откройте нужную категорию и нажмите кнопку-триггер; событие/трейс уйдёт в Metric.
+1. Задайте DSN в `local.properties` (файл в `.gitignore`, в git не попадает):
+   ```properties
+   metric.dsn=https://PROJECT_KEY@metric.example.com/PROJECT_ID
+   ```
+   DSN вшивается в сборку через `BuildConfig.METRIC_DSN`, и Sentry SDK
+   инициализируется автоматически при запуске приложения.
+2. Установите APK на устройство/эмулятор.
+3. Откройте нужную категорию и нажмите кнопку-триггер; событие/трейс уйдёт в Metric.
 
 События и трейсы появляются в Metric асинхронно (Issues, Traces). Проверяйте спустя
 несколько секунд.

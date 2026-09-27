@@ -6,7 +6,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 object Routes {
-    const val SETUP = "setup"
     const val HOME = "home"
     const val ERRORS = "errors"
     const val TRACES = "traces"
@@ -20,14 +19,10 @@ object Routes {
 @Composable
 fun App() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Routes.SETUP) {
-        composable(Routes.SETUP) {
-            SetupScreen(onConnected = { navController.navigate(Routes.HOME) })
-        }
+    NavHost(navController = navController, startDestination = Routes.HOME) {
         composable(Routes.HOME) {
             HomeScreen(
                 onNavigate = { route -> navController.navigate(route) },
-                onOpenSetup = { navController.navigate(Routes.SETUP) },
             )
         }
         composable(Routes.ERRORS) { ErrorsScreen(onBack = { navController.popBackStack() }) }

@@ -1,15 +1,6 @@
 <resources>
     <string name="app_name">Metric Demo</string>
 
-    <string name="setup_title">Настройка подключения</string>
-    <string name="setup_dsn_label">DSN (Data Source Name)</string>
-    <string name="setup_dsn_hint">https://KEY@metric.example.com/PROJECT_ID</string>
-    <string name="setup_connect">Подключить</string>
-    <string name="setup_reset">Сбросить</string>
-    <string name="setup_connected">Подключено</string>
-    <string name="setup_not_connected">Не подключено</string>
-    <string name="setup_hint_text">Вставьте DSN из Metric: проект → Connect an SDK. DSN сохраняется локально и используется для инициализации Sentry SDK.</string>
-
     <string name="home_title">Metric Demo</string>
     <string name="home_subtitle">Выберите категорию, чтобы раскрыть возможности Metric</string>
     <string name="category_errors">Ошибки и крэши</string>
@@ -19,11 +10,6 @@
     <string name="category_context">Breadcrumbs / контекст</string>
     <string name="category_feedback">User feedback</string>
     <string name="category_advanced">Продвинутые механики</string>
-
-    <string name="common_back">Назад</string>
-    <string name="common_sent">Событие отправлено</string>
-    <string name="common_connected">Подключено</string>
-    <string name="common_not_connected">Не подключено: введите DSN</string>
 
     <string name="errors_capture_exception">Отправить перехваченное исключение</string>
     <string name="errors_uncaught_crash">Вызвать необработанный крэш</string>

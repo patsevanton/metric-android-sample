@@ -1,28 +1,20 @@
 package com.example.metricdemo
 
 import android.content.Context
-import io.sentry.Sentry
 import io.sentry.SentryLevel
 import io.sentry.android.core.SentryAndroid
 
 object SentryManager {
 
-    private const val PREFS = "metric_demo_prefs"
-    private const val KEY_DSN = "dsn"
-
     const val RELEASE = "metric-demo@1.0.0"
     const val ENVIRONMENT = "demo"
 
-    fun isInitialized(): Boolean = Sentry.isEnabled()
-
-    fun getStoredDsn(context: Context): String? =
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getString(KEY_DSN, null)
-
-    fun init(context: Context, dsn: String) {
+    fun init(context: Context) {
+        val dsn = BuildConfig.METRIC_DSN.trim()
         if (dsn.isBlank()) return
 
         SentryAndroid.init(context) { options ->
-            options.dsn = dsn.trim()
+            options.dsn = dsn
             options.release = RELEASE
             options.environment = ENVIRONMENT
             options.tracesSampleRate = 1.0
@@ -40,18 +32,5 @@ object SentryManager {
                 }
             }
         }
-
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-            .edit()
-            .putString(KEY_DSN, dsn.trim())
-            .apply()
-    }
-
-    fun reset(context: Context) {
-        Sentry.close()
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-            .edit()
-            .remove(KEY_DSN)
-            .apply()
     }
 }
